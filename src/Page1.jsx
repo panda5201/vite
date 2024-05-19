@@ -13,6 +13,8 @@ const getPermission = () => {
 };
 
 const Frontpage = () => {
+  console.log('Rendering Frontpage component');  // Debugging log
+
   const handleClick = () => {
     getPermission();
   };
@@ -38,22 +40,13 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    console.log('Starting image rotation');  // Debugging log
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (currentIndex === images.length - 1) {
-        setCurrentIndex(0);
-      }
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, [currentIndex, images.length]);
 
   return (
     <div className="gallery-container">
@@ -65,9 +58,9 @@ const Gallery = () => {
   );
 };
 
-const GalleryItem = ({ imageUrl, isActive }) => {
+const GalleryItem = ({ imageUrl }) => {
   return (
-    <div className={`gallery-item ${isActive ? '' : 'fade-out'}`}>
+    <div className="gallery-item">
       <img src={imageUrl} alt="Gallery Item" className="gallery-item-image" />
     </div>
   );

@@ -16,9 +16,11 @@ import Header from './header';
 import Footer from './footer';
 import './App.css';
 
+const repoName = '/vite/'; 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={repoName}>
       <Header />
       <Routes>
         <Route path="/" element={<Frontpage />} />
