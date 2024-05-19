@@ -16,7 +16,7 @@ const Quiz = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/questions');
+      const response = await fetch('https://github.com/panda5201/vite/blob/main/server/questions.js');
       const data = await response.json();
       setQuestions(data);
       setLoading(false);
