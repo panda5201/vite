@@ -10,7 +10,7 @@ function Card(props) {
     borderRadius: "20px",
     margin: "10px",
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${props.iconicPlace})`, // Adding gradient overlay
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${props.iconicPlace})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
