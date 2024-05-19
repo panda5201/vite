@@ -40,7 +40,7 @@ const FoodMenu = ({ setView, currentPage, setCurrentPage }) => {
   const fetchFoodData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3000/api/food-data-aceh");
+      const response = await axios.get("https://0192-2001-448a-20a0-2a8b-c5b3-287d-d004-3353.ngrok-free.app/api/food-data-aceh");
       setFoodData(response.data);
     } catch (error) {
       console.error("Error fetching food data:", error);
