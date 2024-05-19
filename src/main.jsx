@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Frontpage from './Page1';
 import Provincemenu from './Page2';
 import FoodMenu from './Food_menu_Aceh';
@@ -20,7 +20,7 @@ const repoName = '/vite/';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={repoName}>
+    <HashRouter basename={repoName}>
       <Header />
       <Routes>
         <Route path="/" element={<Frontpage />} />
@@ -36,6 +36,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/aboutus" element={<Aboutus />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 );
